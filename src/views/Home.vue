@@ -1,18 +1,63 @@
+<!--  -->
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <el-container>
+    <el-aside width="200px">
+      <NavMenu></NavMenu>
+    </el-aside>
+    <el-container>
+      <el-header>
+        <TopNav></TopNav>
+      </el-header>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
+  </el-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import NavMenu from "../components/home/NavMenu";
+import TopNav from "../components/home/TopNav";
 export default {
-  name: 'home',
+  data() {
+    return {};
+  },
+
   components: {
-    HelloWorld
-  }
-}
+    NavMenu,
+    TopNav
+  },
+
+  computed: {},
+
+  methods: {}
+};
 </script>
+
+<style scoped>
+.el-header {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: white;
+  color: #333;
+  text-align: center;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+}
+
+.el-container {
+  height: 100vh;
+}
+
+.el-container.el-aside {
+}
+</style>

@@ -1,0 +1,3 @@
+export const CHANGE_GOODS_DATA = 'CHANGE_GOODS_DATA'
+export const SAVE_ONO = 'SAVE_ONO'
+export const GOODS_DETAIL = 'GOODS_DETAIL'
